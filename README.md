@@ -3,5 +3,5 @@
 Static portfolio deployed with GitHub Pages.
 
 - Site source: `docs/`
-- Custom domain: `trungportfolio.vn`
+- Free GitHub Pages URL: `https://toilamif.github.io/trungportfolio/`
 - GitHub Pages: deploy from `main` using the Pages workflow
