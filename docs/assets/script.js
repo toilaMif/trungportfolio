@@ -4,9 +4,10 @@ const toTop = document.querySelector("#toTop");
 const themeToggle = document.querySelector("#themeToggle");
 const langToggle = document.querySelector("#langToggle");
 const messageForm = document.querySelector("#messageForm");
+const experienceTimeline = document.querySelector(".experience-timeline");
 const contactEmail = "nguyenthanhtrung22092004@gmail.com";
 const revealTargets = document.querySelectorAll(
-  ".hero-copy, .bac-ho-stage, .section-heading, .content-block, .skill-card, .project-card, .timeline-item, .education-card, .contact-info-card, .social-block, .message-form",
+  ".hero-copy, .bac-ho-stage, .section-heading, .content-block, .skill-card, .project-card, .education-card, .contact-info-card, .social-block, .message-form",
 );
 
 const setActiveLink = () => {
@@ -96,6 +97,22 @@ messageForm.addEventListener("submit", (event) => {
 });
 
 if ("IntersectionObserver" in window) {
+  if (experienceTimeline) {
+    const timelineObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("timeline-fired");
+            timelineObserver.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.34 },
+    );
+
+    timelineObserver.observe(experienceTimeline);
+  }
+
   const revealObserver = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
@@ -114,6 +131,10 @@ if ("IntersectionObserver" in window) {
     revealObserver.observe(element);
   });
 } else {
+  if (experienceTimeline) {
+    experienceTimeline.classList.add("timeline-fired");
+  }
+
   revealTargets.forEach((element) => {
     element.classList.add("is-visible");
   });
