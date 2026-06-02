@@ -748,7 +748,7 @@ body.dark .contact-card {
   font-size: clamp(24px, 2.5vw, 32px);
 }
 
-.skill-card span {
+.skill-card > span {
   width: 56px;
   height: 56px;
   margin-bottom: 22px;
@@ -764,15 +764,16 @@ body.dark .contact-card {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 12px 10px;
+  gap: 12px;
+  align-items: center;
 }
 
 .skill-card .skill-pill {
-  width: auto;
-  height: auto;
+  width: auto !important;
+  height: auto !important;
   min-height: 42px;
   margin: 0;
-  padding: 10px 18px;
+  padding: 10px 18px !important;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -781,8 +782,9 @@ body.dark .contact-card {
   background: linear-gradient(135deg, var(--red), var(--gold));
   box-shadow: 0 12px 24px rgba(193, 18, 31, 0.18);
   font-size: 15px;
-  line-height: 1;
+  line-height: 1.2;
   white-space: nowrap;
+  text-align: center;
 }
 
 body.dark .skill-card .skill-pill {
@@ -1587,7 +1589,6 @@ body.dark .message-form {
 
   .hero,
   .split,
-  .skill-grid,
   .project-grid,
   .education-grid,
   .contact-layout {
