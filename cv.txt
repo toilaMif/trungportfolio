@@ -1,0 +1,48 @@
+NGUYEN THANH TRUNG
+AI Engineer Intern | Computer Science Student
+(+84) 396 611 627 | mif22090404@gmail.com | Ho Chi Minh City, Vietnam
+GitHub | Portfolio | LinkedIn |
+Objective
+Computer Science student focused on Artificial Intelligence, Machine Learning, Deep Learning, Computer Vision, and Natural Language
+Processing. Seeking an AI internship or entry-level role where I can apply model development, data preprocessing, experimentation,
+and deployment practices to practical AI products.
+Education
+Industrial University of Ho Chi Minh City (IUH) Oct 2022 – Present
+B.S. in Computer Science - GPA: 3.29/4.0
+• Fourth-year student; received very good and excellent student scholarships.
+• Relevant topics: Machine Learning, Deep Learning, Computer Vision, Natural Language Processing, Prompt Engineering, LLM
+Fine-tuning, and Inference Optimization.
+• Core methods: CNN, RNN, LSTM, Attention, Transformer, transfer learning, regularization, cross-validation, and performance
+benchmarking.
+Awards
+Encouragement Award – Vietnam Student AI Olympiad 2025, Southern Region 2025 | [Link]
+• National student competition organized by VAIP; competed in a 3-member team during a 6-hour onsite contest.
+• Solved Chinese–Vietnamese Machine Translation and Sign Language Recognition tasks.
+Research Experience
+Machine Learning Engineer Jun 2025 – Sep 2025
+Research Lab at Can Tho University, Remote
+• Collaborated remotely on time series forecasting projects for research-oriented model development.
+• Developed LSTM, GRU, XGBoost, Transformer, TCN, and ensemble models for forecasting experiments.
+• Improved input data quality using Linear Scaling, LOCI, Distribution Mapping, and Delta Change bias correction methods.
+• Optimized model performance through Grid Search, Random Search, and regularization techniques.
+Projects
+YouTube Video Summarization & RAG Question Answering | [Link] 2026
+• Built an end-to-end Vietnamese video RAG pipeline using yt-dlp and youtube-transcript-api to extract metadata/subtitles, clean
+transcripts, segment lectures into 60-second timestamped blocks, and store reusable JSON artifacts.
+• Implemented topic segmentation and semantic retrieval with PhoBERT, BGE-M3, and RoBERTa Student embeddings using cosine
+similarity, topic-shift detection, and top-k block retrieval.
+• Integrated Qwen2.5-7B for topic/final summarization and Qwen3-4B for context-grounded QA with returned timestamps, retrieved
+block IDs, and similarity scores.
+Chest X-ray Classification for COVID-19, Pneumonia, and Normal | [Link] 2025
+• Built a medical image classification pipeline for three chest X-ray classes using 21,418 training, 1,337 validation, and 4,020 test
+images with resizing to 224x224, normalization, and augmentation.
+• Trained and compared transfer learning models, including VGG16 and ResNet50 with TensorFlow/Keras and DenseNet169 with
+PyTorch/torchvision, under the same dataset split.
+• Evaluated models with accuracy, precision, recall, F1-score, confusion matrices, class-wise reports, prediction visualizations, and
+Grad-CAM; DenseNet169 reached 0.990 weighted metrics.
+Technical Skills
+Programming: Python, C/C++, Java, JavaScript, C#
+Machine Learning & Deep Learning: PyTorch, TensorFlow, Scikit-learn, Keras, Hugging Face Transformers
+Computer Vision & NLP: OpenCV, image classification, object detection, preprocessing, tokenization, embeddings, sequence modeling
+Data & Visualization: Pandas, NumPy, Matplotlib, Seaborn
+Platforms & Tools: Linux, Git, Docker, Kaggle, Hugging Face, Jupyter Notebook, VS Code
