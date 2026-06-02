@@ -938,13 +938,15 @@ body.dark .project-tags span {
   position: absolute;
   left: 50%;
   top: var(--axis-y);
-  width: 18px;
-  height: 18px;
+  width: 22px;
+  height: 22px;
   border-radius: 50%;
   background: var(--gold);
   transform: translate(-50%, -50%);
-  box-shadow: 0 0 0 8px rgba(193, 18, 31, 0.12);
-  z-index: 4;
+  box-shadow:
+    0 0 0 8px rgba(255, 248, 237, 0.9),
+    0 0 0 14px rgba(193, 18, 31, 0.12);
+  z-index: 6;
 }
 
 .timeline-item::after {
@@ -968,8 +970,8 @@ body.dark .project-tags span {
   min-height: 560px;
   padding: 20px 0;
   isolation: isolate;
-  --bullet-start: calc(16.666% - 19px);
-  --bullet-end: calc(83.333% - 19px);
+  --bullet-start: calc(16.666% - 14px);
+  --bullet-end: calc(83.333% - 14px);
   --axis-y: 48%;
 }
 
@@ -988,21 +990,7 @@ body.dark .project-tags span {
 }
 
 .experience-timeline::after {
-  content: "";
-  position: absolute;
-  left: var(--bullet-start);
-  top: calc(var(--axis-y) - 14px);
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
-  background:
-    radial-gradient(circle at 68% 36%, #fff8ed 0 12%, transparent 13%),
-    linear-gradient(135deg, var(--gold), var(--red));
-  box-shadow:
-    0 0 0 10px rgba(193, 18, 31, 0.1),
-    0 12px 24px rgba(127, 17, 25, 0.24);
-  opacity: 0;
-  z-index: 3;
+  display: none;
 }
 
 .experience-timeline > .timeline-item:nth-child(1),
@@ -1039,7 +1027,7 @@ body.dark .project-tags span {
 .experience-timeline > .timeline-item:nth-child(1)::before,
 .experience-timeline > .timeline-item:nth-child(2)::before,
 .experience-timeline > .timeline-item:nth-child(3)::before {
-  outline: 4px solid rgba(255, 248, 237, 0.92);
+  outline: 0;
 }
 
 .experience-timeline .timeline-date {
@@ -1072,7 +1060,7 @@ body.dark .project-tags span {
 }
 
 .experience-timeline.timeline-fired::after {
-  animation: bulletShot 1.7s var(--ease) forwards;
+  animation: none;
 }
 
 .experience-timeline.timeline-fired .timeline-item {
@@ -1089,6 +1077,49 @@ body.dark .project-tags span {
 
 .experience-timeline.timeline-fired .timeline-item:nth-child(3) {
   animation-delay: 1320ms;
+}
+
+.compact-timeline {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  --bullet-start: calc(25% - 14px);
+  --bullet-end: calc(75% - 14px);
+  --axis-y: 330px;
+  min-height: 690px;
+}
+
+.compact-timeline > .timeline-item:nth-child(1),
+.compact-timeline > .timeline-item:nth-child(2) {
+  align-self: start;
+}
+
+.compact-timeline > .timeline-item:nth-child(1) .timeline-card {
+  top: 0;
+  width: min(100%, 340px);
+}
+
+.compact-timeline > .timeline-item:nth-child(2) .timeline-card {
+  top: calc(var(--axis-y) + 70px);
+  width: min(100%, 340px);
+}
+
+.compact-timeline > .timeline-item:nth-child(1)::after {
+  top: calc(var(--axis-y) - 34px);
+  height: 34px;
+  background: linear-gradient(var(--red), var(--gold));
+}
+
+.compact-timeline > .timeline-item:nth-child(2)::after {
+  top: var(--axis-y);
+  height: 58px;
+  background: linear-gradient(var(--gold), var(--red));
+}
+
+.compact-timeline > .timeline-item:nth-child(1) .timeline-date {
+  top: calc(var(--axis-y) + 34px);
+}
+
+.compact-timeline > .timeline-item:nth-child(2) .timeline-date {
+  top: calc(var(--axis-y) - 62px);
 }
 
 .timeline-item strong {
@@ -1127,6 +1158,12 @@ body.dark .project-tags span {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 24px;
+}
+
+.single-education {
+  max-width: 720px;
+  margin: 0 auto;
+  grid-template-columns: 1fr;
 }
 
 .education-card {
@@ -1654,8 +1691,16 @@ body.dark .message-form {
     padding: 18px 22px 8px;
     overflow-x: auto;
     scroll-snap-type: x proximity;
-    --bullet-start: calc(22px + 120px);
-    --bullet-end: calc(22px + 120px + 164vw);
+    --bullet-start: calc(22px + 120px - 14px);
+    --bullet-end: calc(22px + 120px + 164vw - 14px);
+  }
+
+  .compact-timeline {
+    grid-template-columns: repeat(2, minmax(260px, 82vw));
+    --bullet-start: calc(22px + 120px - 14px);
+    --bullet-end: calc(22px + 120px + 82vw - 14px);
+    --axis-y: 330px;
+    min-height: 690px;
   }
 
   .experience-timeline::before {
@@ -1664,7 +1709,7 @@ body.dark .message-form {
   }
 
   .experience-timeline::after {
-    left: calc(22px + 120px);
+    left: calc(22px + 120px - 14px);
   }
 
   .experience-timeline .timeline-item {
