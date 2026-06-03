@@ -140,5 +140,5 @@ if ("IntersectionObserver" in window) {
   });
 }
 
-applyLanguage("vi");
+applyLanguage(localStorage.getItem("portfolio-language") || "en");
 
